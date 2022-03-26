@@ -17,6 +17,7 @@ You may also see any lint errors in the console.
 ### `To Check out the current app progress`
 
 Use this link [https://thoughts-app-phi.vercel.app/](https://thoughts-app-phi.vercel.app/)
+Also keep in mind that the current version is not responsive yet. I hope to implement the responsive designs for mobile and other in the near future.
 Your feedback is welcome. Thank you.
 
 ### `App Screenshots`
