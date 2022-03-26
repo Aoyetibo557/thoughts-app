@@ -14,6 +14,15 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
+### `App Screenshots`
+
+![feedPage](https://user-images.githubusercontent.com/54692909/160218531-50f11e40-c335-4cea-9d26-d5ed2c609afd.JPG)
+![eventsPage](https://user-images.githubusercontent.com/54692909/160218555-66f7ab61-1f85-4b1a-8c7d-662aefefd2ad.JPG)
+![profilePage](https://user-images.githubusercontent.com/54692909/160218561-f1daf2ed-6a69-4e30-a6b5-75bf688ea9c4.JPG)
+![communityChat](https://user-images.githubusercontent.com/54692909/160218574-dde835ed-6492-4f6c-a513-6b7d74f8734c.JPG)
+![settingsPage](https://user-images.githubusercontent.com/54692909/160218589-1c1a6685-31da-49df-995e-328568165455.JPG)
+![createNewFeedPage](https://user-images.githubusercontent.com/54692909/160218607-80e00676-1d24-4be9-8307-927fb213c555.JPG)
+
 ### `npm test`
 
 Launches the test runner in the interactive watch mode.\
