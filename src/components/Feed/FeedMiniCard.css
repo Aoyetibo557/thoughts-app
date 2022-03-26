@@ -1,0 +1,40 @@
+
+.feedcard {
+    padding: 10px;
+    width: 240px;
+    height: 120px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    box-shadow: 10px 5px 10px 5px #eee;
+    margin-left: 10px;
+    margin-right:10px ;
+
+
+}
+
+.feedcard__img {
+    height: 100px;
+    object-fit: cover;
+
+}
+
+.feedcard__link{
+    text-decoration: none;
+    color: #000;
+}
+
+.feedcard__text {
+    font-size: 17px;
+    letter-spacing: 1px;
+    font-weight: 500;
+    text-decoration: none;
+    color: #000;
+    text-align: center;
+}
+
+.feedcard:hover {
+    transform: scale(1.09);
+}

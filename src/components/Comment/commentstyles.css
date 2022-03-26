@@ -1,0 +1,137 @@
+/* comment component styles */
+.comment {
+    display: flex;
+    flex-direction: column;
+    padding:15px;
+
+}
+.comment__container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+}
+
+
+.comment__img {
+    height: 30px;
+    border-radius: 999px;
+}
+
+.comment__info {
+    display:flex ;
+    flex-direction: column;
+    margin-left: 10px;
+}
+
+.comment__info h4 {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.comment__info p {
+    font-size: 12px;
+    opacity: 0.6;
+    font-weight: 400;
+}
+
+.comment__body{
+    padding: 10px;
+}
+
+.comment__body p {
+    font-size: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.comment__actions {
+    width: 230px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.comment__actions div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+}
+
+.comment__button{
+    background-color: transparent;
+    padding: 10px;
+    font-size: 13px;
+    font-weight: 600;
+    opacity: 0.6;
+    border: none;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+
+.comment__button:hover {
+    opacity: 1;
+    transform: scale(1.08);
+    text-decoration: underline;
+}
+
+.comment__replies {
+    margin-left: 30px;
+}
+
+
+/* Comments component Styles */
+
+.comments {
+    margin-top: 30px;
+}
+.comments__container {
+}
+
+/* Comment form component styles */
+
+.comment__form{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.commentform__input{
+    padding: 7px;
+    width: 25vw;
+    height: 20px;
+    resize: none;
+    border: 1px solid rgba(128, 128, 128, 0.398);
+    border-radius: 999px;
+    outline: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.commentform__textarea:focus {
+    outline: rgba(126, 19, 226, 0.391) 1px solid;
+}
+
+.commentform__button__disabled{
+    padding: 8px;
+    border-radius: 999px;
+    color: #fff;
+    background-color: #000;
+    border: none;
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+.commentform__button {
+    padding: 8px;
+    border-radius: 999px;
+    color: #fff;
+    background-color: #000;
+    border: none;
+    cursor: pointer;
+}
+
+.commentform__button:hover {
+    transform: scale(1.09);
+}

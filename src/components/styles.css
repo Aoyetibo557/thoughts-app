@@ -1,0 +1,44 @@
+.button {
+    background-color: transparent;
+    font-size: 14px;
+    font-weight: 400;
+    padding: 10px;
+    width: 100%;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.primary__button {
+    background-color: #000;
+    color:#fff;
+    border: none;
+}
+
+.secondary__button{
+    background-color: #fff;
+    color: #000;
+    border: 1px solid rgba(0, 0, 0, 0.611);
+}
+
+.tetiary__button {
+    text-decoration: underline;
+    border: none;
+    font-size: 16px;
+}
+.button:hover {
+    transform: scale(1.02);
+}
+
+.icon{
+    font-size: 1.2rem;
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+.icon:hover {
+    opacity: 1;
+    transform: scale(1.09);
+}

@@ -1,0 +1,145 @@
+.settingcomp {
+    margin-left: 20%;
+    height: 90vh;
+}
+
+.settingcomp__top {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 40vw;
+}
+
+.settingcomp__top div h4 {
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+
+.settingcomp__top div h5 {
+    font-weight: 400;
+    font-size: 2.3rem;
+}
+
+.settingcomp__form {
+    padding: 10px;
+    height: 100%;
+    width: 55vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.settingcomp__img {
+    width: 200px;
+    border-radius: 999px;
+}
+.settingcomp__form__div {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.settingcomp__form__div p {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.settingcomp__form__div h4 {
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.settingcomp__input {
+    width: 60%;
+    padding: 10px;
+    outline: none;
+    border: 1px solid rgba(128, 128, 128, 0.364);
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.settingcomp__textarea {
+    width: 60%;
+    height: 150px;
+    resize: none;
+    outline: none;
+    padding: 10px;
+    font-size: 14px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border: 1px solid rgba(128, 128, 128, 0.364);
+    border-radius: 5px;
+}
+
+.settingcomp__input:focus-within, .settingcomp__textarea:focus-within {
+    border: 1px solid rgba(137, 43, 226, 0.439);
+}
+
+.settingcomp__button__div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.settingcomp__button{
+    width: 150px;
+    padding: 10px;
+    background-color: blueviolet;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.settingcomp__button:hover {
+    transform: scale(1.04);
+}
+
+.settingcomp__error {
+    background-color: red;
+    color: #fff;
+    width:400px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+    padding: 4px;
+    position: fixed;
+    left: 70%;
+    top: 50px;
+}
+
+.settingcomp__success {
+    background-color: rgba(0, 128, 0, 0.494);
+    color: #fff;
+    width:400px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+    padding: 4px;
+    position: fixed;
+    left: 70%;
+    top: 50px;
+}
+
+.error__button {
+    padding: 8px;
+    background-color: transparent;
+    border: none;
+    border-left: 1px solid #fff;
+    cursor: pointer;
+}
+
+.error__icon{
+    font-size: 1.8rem;
+    color: #fff;
+    opacity: 0.6;
+}
+
+.error__icon:hover{
+    opacity: 1;
+}

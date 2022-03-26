@@ -1,0 +1,111 @@
+
+.card__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 300px;
+    height: 400px;
+    border-radius: 7px;
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: 10px 5px 10px 5px #eee;
+    margin: 10px;
+}
+
+.card__container div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card__tag {
+    margin-left: 10px;  
+    background-color: #000;
+    color: #fff;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.card__icons {
+    width: 130px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.card__icons p {
+    font-size: 16px;
+    display: flex;
+    flex-direction: row;
+}
+.card__icon{
+    font-size: 1.6rem;
+    cursor: pointer;
+    margin-left: 5px;
+    background-color: #fff !important;
+}
+
+
+.like__reaction {
+    color: red;
+}
+
+.card__date {
+    font-weight: 600;
+    font-size: 15px;
+    opacity: 0.3;
+    font-style: italic;
+}
+
+.card__content {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.card__author {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 180px;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.card__avatar {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    border: 1px solid rgba(0, 0, 0, 0.227);
+}
+
+
+.hidden__menu {
+    display: none !important;
+}
+.card__menu {
+    display: flex;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    justify-content: space-around !important;
+    height: 180px;
+    width: 120px;
+    padding: 10px;
+    background-color: whitesmoke;
+    box-shadow: 10px 5px 10px 5px #eee; 
+   
+}
+
+.card__link {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: #000;
+    opacity: 0.6;
+}
+
+.card__link:hover{
+    opacity: 1;
+    transform: scale(1.05);
+}

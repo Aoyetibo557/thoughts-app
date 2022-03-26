@@ -1,0 +1,23 @@
+.profile {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    text-decoration: none;
+    color: #000;
+}
+
+.profile__avatar {
+    margin-right: 10px;
+    width: 35px;
+    height: 35px;
+    border: 1px solid rgba(0, 0, 0, 0.213);
+    border-radius: 999px;
+    object-fit: contain;
+}
+
+.profile__name {
+    font-size: 1rem;
+    font-weight: 400;
+}
+

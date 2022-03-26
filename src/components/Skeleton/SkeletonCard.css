@@ -1,0 +1,41 @@
+.skeleton-wrapper {
+    margin: 20px auto;
+    padding: 10px 15px;
+    border-radius: 4px;
+    position: relative;
+    overflow: hidden;
+    height: 370px;
+}
+
+.skeleton__card {
+    width: 250px;
+}
+
+.skeleton__tags{
+    width: 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    
+}
+
+.skeleton__content {
+    margin-top: 20px;
+}
+
+.skeleton__profile {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Themes */
+.light {
+    /* background-color: #f2f2f2; */
+    background: #fff;
+}
+
+.skeleton-wrapper.dark {
+    background-color: #444;
+}

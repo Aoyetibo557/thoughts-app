@@ -1,0 +1,84 @@
+.eventcard {
+    width: 300px;
+    height: 350px;
+    margin: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.165);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.eventcard:hover {
+    box-shadow: 1px 5px 10px 1px #eee;
+
+}
+
+.eventcard__img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.eventcard__title {
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+.eventcard__info {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.eventcard__info-div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 10px;
+
+    
+}
+
+.eventcard__type {
+    opacity: 0.6;
+    font-size: 13px;
+}
+
+.eventcard__date-div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 200px;
+}
+
+.eventcard__date-icon {
+    font-size: 19px;
+    color: #000;
+}
+
+.eventcard__date {
+    font-size: 13px;
+    opacity: 0.6;
+    margin-left: 10px;
+}
+
+.eventcard__links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-top: 1px solid rgba(0, 0, 0, 0.186);
+    padding: 10px;
+
+}
+
+
+.eventcard__link {
+    text-decoration: none;
+    padding: 6px;
+    border: 1px solid rgba(0, 0, 0, 0.296);
+    color: #000;
+    font-size: 14px;
+    font-weight: 400;
+    cursor: pointer;
+}
