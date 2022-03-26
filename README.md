@@ -16,6 +16,8 @@ You may also see any lint errors in the console.
 
 ### `App Screenshots`
 
+![loginPage](https://user-images.githubusercontent.com/54692909/160218698-c3f1de77-c403-4f1b-bcdb-b150a50bd0de.JPG)
+![signupPage](https://user-images.githubusercontent.com/54692909/160218703-9aeb646a-4805-4b5f-9f13-7acb6e53fd3f.JPG)
 ![feedPage](https://user-images.githubusercontent.com/54692909/160218531-50f11e40-c335-4cea-9d26-d5ed2c609afd.JPG)
 ![eventsPage](https://user-images.githubusercontent.com/54692909/160218555-66f7ab61-1f85-4b1a-8c7d-662aefefd2ad.JPG)
 ![profilePage](https://user-images.githubusercontent.com/54692909/160218561-f1daf2ed-6a69-4e30-a6b5-75bf688ea9c4.JPG)
