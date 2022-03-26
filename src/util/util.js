@@ -212,7 +212,7 @@ const createNewMessage = async(msgGroup, uid, msg, currentUser ) => {
         const newMessageRef = collection(db, `${msgGroup}`);
         const newMsgRef = await addDoc(newMessageRef, {
             message: msg,
-            uid: uid || auth.currentUser?.uid,
+            uid: uid.length === 0 ? auth.currentUser.uid : uid,
             createdAt: new Date(),
             author:currentUser,
         })

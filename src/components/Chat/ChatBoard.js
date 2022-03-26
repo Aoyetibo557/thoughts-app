@@ -30,11 +30,12 @@ function ChatBoard({currentUser, chatgroup}) {
         const { uid } = auth.currentUser;
 
         // add function to add new essageto the correct collection
-        createNewMessage(chatgroup, uid, formValue, currentUser).then((response)=>{
+        createNewMessage(chatgroup, uid || auth.currentUser.uid, formValue, currentUser).then((response)=>{
             // console.log(response);
             setSuccess(true)
         }).catch((err) => {
-            setSuccess(false)
+            setSuccess(false);
+            console.log(err.message)
         })
 
         setFormValue("");

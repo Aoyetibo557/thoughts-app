@@ -1,6 +1,5 @@
 import React from 'react';
 import "./ChatMessage.css";
-import { auth } from '../../firebase/firebase'
 
 function ChatMessage({text, author, createdAt}) {
 
