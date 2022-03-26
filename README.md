@@ -14,6 +14,11 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
+### `To Check out the current app progress`
+
+Use this link [https://thoughts-app-phi.vercel.app/](https://thoughts-app-phi.vercel.app/)
+Your feedback is welcome. Thank you.
+
 ### `App Screenshots`
 
 ![loginPage](https://user-images.githubusercontent.com/54692909/160218698-c3f1de77-c403-4f1b-bcdb-b150a50bd0de.JPG)
