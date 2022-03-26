@@ -9,7 +9,7 @@ import { IoGameController } from "react-icons/io5";
 import {BsLaptopFill, BsCalendarWeek} from "react-icons/bs";
 import ProfilePicture from "../../images/myPicture.jfif";
 import { Link } from 'react-router-dom';
-
+import { auth } from "../../firebase/firebase.js"
 
 function SidebarLinks({authedUsersName}) {
   return (
@@ -32,7 +32,7 @@ function SidebarLinks({authedUsersName}) {
         </Link>
 
         <div className='linkDiv'>
-          <Profile avatar={ProfilePicture} name={authedUsersName} />
+          <Profile avatar={ProfilePicture} name={authedUsersName.length === 0 ? auth.currentYser.uid:authedUsersName } />
         </div>
       </div>
 

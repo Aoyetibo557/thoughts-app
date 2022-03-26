@@ -27,10 +27,10 @@ function ChatBoard({currentUser, chatgroup}) {
     const sendMessage = (ev) => {
         ev.preventDefault();
 
-        const { uid } = auth.currentUser;
+        // const { uid } = auth.currentUser;
 
         // add function to add new essageto the correct collection
-        createNewMessage(chatgroup, uid || auth.currentUser.uid, formValue, currentUser).then((response)=>{
+        createNewMessage(chatgroup, auth.currentUser.uid, formValue, currentUser).then((response)=>{
             // console.log(response);
             setSuccess(true)
         }).catch((err) => {
