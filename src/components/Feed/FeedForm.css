@@ -81,3 +81,12 @@
     font-size: 14px;
     cursor: auto;
 }
+
+@media only screen and (max-width: 768px ) {
+    .feedform__button {
+        width: 100%;
+    }
+    .feedform__button-disabled{
+        width: 100%;
+    }
+}

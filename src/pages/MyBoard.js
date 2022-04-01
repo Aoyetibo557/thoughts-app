@@ -1,7 +1,6 @@
 import React from 'react';
 import "./styles.css";
 import BoardTable from '../components/Board/BoardTable';
-import Sidebar from '../components/Sidebar/Sidebar';
 
 
 /**
@@ -10,13 +9,10 @@ import Sidebar from '../components/Sidebar/Sidebar';
  * @returns 
  */
 
-
-
 function MyBoard() {
   return (
     <>
-        <div className='container'>
-            {/* <Sidebar /> */}
+        <div className=''>
             {/* This will probably have a prop passed so the board can retrienve the users collections */}
             <BoardTable /> 
         </div>

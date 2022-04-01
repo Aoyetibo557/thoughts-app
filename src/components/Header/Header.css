@@ -30,3 +30,9 @@
 .header__link:hover {
     transform: scale(1.09);
 }
+
+@media only screen and (max-width: 768px) {
+    .header__nav {
+        width: 100%;
+    }
+}

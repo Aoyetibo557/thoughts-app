@@ -19,3 +19,16 @@
     box-shadow: 10px 5px 10px 5px #eee;
 
 }
+
+@media only screen and (max-width: 768px) {
+    .newfeedcomp {
+        width: 100%;
+        height: 80vh;
+        margin-left: 0%;
+    }
+
+    .newfeedcomp__form {
+        width: 80%;
+        height: 55vh;
+    }
+}

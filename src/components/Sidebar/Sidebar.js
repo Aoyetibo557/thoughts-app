@@ -1,9 +1,10 @@
-import React from 'react';
+import React, {useState} from 'react';
 import "./Sidebar.css";
 import SidebarLinks from '../Sidebarlinks/SidebarLinks';
 import { logOut } from '../../firebase/auth';
 import { useNavigate } from 'react-router-dom';
 import SidebarTop from '../SidebarTop/SidebarTop';
+import ResponsiveSidebar from './ResponsiveSidebar';
 
 
 /**
@@ -13,7 +14,6 @@ import SidebarTop from '../SidebarTop/SidebarTop';
 
 function Sidebar({authedUsersName}) {
   let navigate = useNavigate();
-
   const handleLogOut =() =>{
       logOut()
       navigate("/")
@@ -21,11 +21,15 @@ function Sidebar({authedUsersName}) {
   }
   return (
     <>
-      <div className='sidebar'>
+      <div className= 'sidebar'>
         <SidebarTop />
         <SidebarLinks authedUsersName={authedUsersName} />
         <button onClick={handleLogOut} className='button secondary__button'>LogOut</button>
       </div>
+
+      {/* <div className='sidebar__hidden'>
+        <ResponsiveSidebar authUserName={authedUsersName} />
+      </div> */}
         
     </>
   )

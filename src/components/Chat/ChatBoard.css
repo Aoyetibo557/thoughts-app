@@ -97,3 +97,34 @@
     color: rgba(0, 0, 0, 0.556);
     /* color:rgba(var(--sk_secondary_highlight,242,199,68),1); */
 }
+
+@media only screen and (max-width: 768px) {
+    .chatboard {
+        left: 0%;
+        width: 100%;
+    }
+
+    .chatboard__footer {
+        display: flex;
+        flex-direction: row;
+        width:100%;
+        position: fixed;
+        bottom: 20px;
+    }
+
+}
+
+@media only screen and (max-width: 1024px) {
+    .chatboard {
+        left: 0%;
+        width: 100%;
+    }
+    
+    .chatboard__footer {
+        display: flex;
+        flex-direction: row;
+        width:100%;
+        position: fixed;
+        bottom: 20px;
+    }
+} 

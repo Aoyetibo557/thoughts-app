@@ -21,3 +21,12 @@
     opacity: 0.6;
     font-weight: 400;
 }
+
+@media only screen and (max-width: 1024px) {
+    .trendingtable {
+        height: 100%;
+        width: 100%;
+        margin-left: 20px;
+        margin-top: 20px;
+    }
+}

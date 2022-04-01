@@ -64,3 +64,26 @@
     justify-content: space-between;
     margin-top: 20px;
 }
+
+@media only screen and (max-width: 768px ) {
+    .userprofile__container{
+        width: 100%;
+        align-items: center;
+    }
+    .userprofile__div {
+        width: 90%;
+        display:flex;
+        flex-direction: column;
+    }
+
+    .userprofile__info__div {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 90%;
+        padding: 20px;
+        margin-bottom: 10px;
+        background-color: rgba(223, 215, 215, 0.707);
+    }
+}

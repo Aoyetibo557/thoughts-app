@@ -82,3 +82,10 @@
     font-weight: 400;
     cursor: pointer;
 }
+
+
+@media only screen and (max-width: 768px) {
+    .eventcard {
+
+    }
+}

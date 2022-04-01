@@ -4,3 +4,15 @@
     flex-wrap: wrap;
     justify-content: space-between;
 }
+
+@media only screen and (max-width:768px) {
+    .eventTable {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .eventTable {
+        width: 100%;
+    }
+}

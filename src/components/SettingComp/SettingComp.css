@@ -143,3 +143,10 @@
 .error__icon:hover{
     opacity: 1;
 }
+
+@media only screen and (max-width: 768px) {
+    .settingcomp {
+        margin-left: 0%;
+        height: 90vh;
+    }
+}

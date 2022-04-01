@@ -135,3 +135,10 @@
 .commentform__button:hover {
     transform: scale(1.09);
 }
+
+@media only screen and (max-width: 768px) {
+    .commentform__input{
+        width: 100%;
+        height: 15px;       
+    }
+}

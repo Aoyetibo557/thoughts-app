@@ -32,7 +32,7 @@ function SidebarLinks({authedUsersName}) {
         </Link>
 
         <div className='linkDiv'>
-          <Profile avatar={ProfilePicture} name={authedUsersName.length === 0 ? auth.currentYser.uid:authedUsersName } />
+          <Profile avatar={ProfilePicture} name={authedUsersName.length === 0 ? auth.currentUser?.uid : authedUsersName } />
         </div>
       </div>
 

@@ -26,7 +26,7 @@ function EventBoard() {
 
         <div className='eventboard__filter'>
 
-          <div>
+          <div className='eventboard__filter__div'>
             <button onClick={() => setEventFilter("company")} className='eventboard__filter__button'>Company</button>
             <button onClick={() => setEventFilter("location")} className='eventboard__filter__button'>Location</button>
             <button onClick={() => setEventFilter("industry")} className='eventboard__filter__button'>Industry</button>

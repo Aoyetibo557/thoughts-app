@@ -52,3 +52,7 @@
     flex-direction: row;
     flex-wrap: wrap;
 }
+
+@media only screnn and (max-width: 768px) {
+    
+}

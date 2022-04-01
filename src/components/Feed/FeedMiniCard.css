@@ -38,3 +38,24 @@
 .feedcard:hover {
     transform: scale(1.09);
 }
+
+@media only screen and (max-width: 768px) {
+    .feedcard {
+        padding: 10px;
+        width: 90px;
+        height: 100px;
+        justify-content: center;
+        margin-left: 0px;
+        margin-right: 0px ;
+    }
+
+    .feedcard__img {
+        height: 60px;
+        object-fit: contain;
+    }
+    
+    .feedcard__text {
+        font-size: 15px;
+        letter-spacing: 0px;
+    }
+}
