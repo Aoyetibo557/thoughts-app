@@ -76,6 +76,22 @@
 
 }
 
+.chatboard__button-disabled {
+    opacity: 0.3;
+    padding: 7px;
+    cursor: pointer;
+    background-color: blueviolet;
+    color: #000;
+    border: rgba(0, 0, 0, 0.522) 1px solid;
+    font-size: 17px;
+    border-radius: 999px;
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
 .chatboard__button__icon{
     font-size: 1.5rem;
 }

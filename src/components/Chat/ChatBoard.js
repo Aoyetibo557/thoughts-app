@@ -78,9 +78,9 @@ function ChatBoard({currentUser, chatgroup}) {
 
         <div className='chatboard__footer' > 
            <form className='chatboard__form' onSubmit={sendMessage}>
-               <input className='chatboard__input' type="text" name='chat-input' value={formValue} onChange={(e) => setFormValue(e.target.value)} placeholder='new Message' />
-               <button type='submit' className='chatboard__button'>
-                    <IoSend className='chatboard__button__icon' />   
+               <input required className='chatboard__input' type="text" name='chat-input' value={formValue} onChange={(e) => setFormValue(e.target.value)} placeholder='new Message' />
+               <button type='submit' className={formValue.length === 0 ? "chatboard__button-disabled" : 'chatboard__button'}>
+                    <IoSend aria-disabled={formValue.length === 0 ? "true" :"false"} className='chatboard__button__icon' /> 
                 </button>
            </form>
         </div>
