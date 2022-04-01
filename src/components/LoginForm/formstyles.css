@@ -83,7 +83,7 @@
 
 @media only screen and (max-width: 992px) {
     .form__container {
-        width: 100vw;
+        width: 100%;
         align-items: center;
     }
     .form {
