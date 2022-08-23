@@ -10,6 +10,7 @@ import {BsLaptopFill, BsCalendarWeek} from "react-icons/bs";
 import ProfilePicture from "../../images/myPicture.jfif";
 import { Link } from 'react-router-dom';
 import { auth } from "../../firebase/firebase.js"
+import Loading from '../Loading/Loading';
 
 function SidebarLinks({authedUsersName}) {
   return (
@@ -32,7 +33,12 @@ function SidebarLinks({authedUsersName}) {
         </Link>
 
         <div className='linkDiv'>
-          <Profile avatar={ProfilePicture} name={authedUsersName.length === 0 ? auth.currentUser?.uid : authedUsersName } />
+          {
+            auth.currentUser ? 
+            <Profile avatar={ProfilePicture} name={authedUsersName.length === 0 ? auth.currentUser?.uid : authedUsersName } />
+            :
+            <Loading />
+          }
         </div>
       </div>
 
@@ -58,9 +64,9 @@ function SidebarLinks({authedUsersName}) {
         </div>
       </div>
 
-      <div className="styles">
+      {/* <div className="styles">
         <h4 className='styles__h4'>Direct Messages</h4>
-      </div>
+      </div> */}
 
     </div>
   )

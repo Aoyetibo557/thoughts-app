@@ -2,6 +2,7 @@ import React from 'react';
 import "./UserProfile.css";
 import { RiLockPasswordLine} from "react-icons/ri";
 import MyBoard from '../../pages/MyBoard';
+import Loading from '../Loading/Loading';
 
 // avatar,name, prononuns,profession, email, instagramlink,twitterlink,facebooklink, bio
 
@@ -11,7 +12,13 @@ function UserProfile({userData }) {
         <div className='userprofile'>
             <section className='userprofile__container'>
                 <div className='userprofile__div'>
-                    <img className='userprofile__img'  src={`https://ui-avatars.com/api/?background=0D8ABC&color=fff&name=${userData.firstname+" "+userData.lastname}`} alt={userData.name} />
+                    {userData.firstname ?
+                        (
+                            <img className='userprofile__img'  src={`https://ui-avatars.com/api/?background=0D8ABC&color=fff&name=${userData.firstname+" "+userData.lastname}`} alt={userData.name} />
+                        ):(
+                            <Loading />
+                        )
+                    }
                     <h4 className='userprofile__name'>{userData.firstname} {userData.lastname}</h4>
                     <p className='userprofile__p'>{userData.prononuns}</p>
                     {!userData.profession ? "" : <p className='userprofile__p'>{userData.profession}</p>}

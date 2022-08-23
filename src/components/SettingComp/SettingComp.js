@@ -4,7 +4,7 @@ import "./SettingComp.css";
 import { IoMdClose } from "react-icons/io";
 import AOS from "aos"
 import "aos/dist/aos.css";
-import ProfilepageSkeleton from '../Skeleton/ProfilepageSkeleton';
+import Loading from '../Loading/Loading';
 
 
 
@@ -30,7 +30,7 @@ function SettingComp({userData}) {
             setNewUsername(userData?.username);
             setNewBio(userData?.bio);
             setNewJobTitle(userData?.profession);
-        },2500)
+        },1500)
 
     },[userData?.bio, userData?.profession, userData?.username])
 
@@ -126,7 +126,11 @@ function SettingComp({userData}) {
 
         </form>
     </div>
-  ): <ProfilepageSkeleton />
+  ):<div style={{display: 'flex', position: "absolute", left: "50%", top: "40%", width: "30vw"}}>
+        <Loading /> 
+    </div> 
+    
+
 }
 
 export default SettingComp
