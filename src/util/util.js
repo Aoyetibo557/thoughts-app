@@ -87,7 +87,8 @@ const createNewComment = async(text, parentId, postId) => {
 
 const getComments = async(postId) => {
     // console.clear();
-    const commentsRef =  collection(db, "comments");
+    const commentsRef = collection(db, "comments");
+
     const commentsQuery = query(commentsRef, where("postId", "==", postId));        
     const querySnapShot =  getDocs(commentsQuery);
     var commentObj =[];
@@ -95,8 +96,7 @@ const getComments = async(postId) => {
     (await querySnapShot).forEach((doc) => {
         commentObj.push(doc.data())
     })
-
-   
+    
     return commentObj;
 }
 
@@ -124,15 +124,17 @@ const getFeed = async() => {
         feedsObj.push(doc.data())
     ))
 
-    // const unsub = onSnapshot(querySnapShot, (snap)=>{
-    //    console.log(snap)
+    // onSnapshot(querySnapShot, (snap)=>{
+    //     snap.docChanges().forEach((temp) =>{
+    //         console.log(temp.type)
+    //     })
     // },
     // (error) => {   
     //     console.log("Err", error)
     // })
 
     // unsub();
-    
+
     return feedsObj
 }
 
@@ -145,7 +147,9 @@ const updateSelectedComment = async(newInput, commentId) => {
             comment: newInput
         })
     }catch(error){
-
+        const errorCode = error.code;
+        const errorMsg = error.message;
+        return {errorCode, errorMsg};
     }
 }
 

@@ -13,7 +13,7 @@ function Comment({comment, replies, currentUserId, addComment,  postId, activeCo
     const canEdit = currentUserId === comment.userId;
     const canDelete = currentUserId === comment.userId;
 
-    console.log(currentUserId, comment.userId, comment.id)
+    // console.log(currentUserId, comment.userId, comment.id)
 
     //Conditional statement to check if the user is either replying or editing based on the click event
     const isReplying = activeComment && activeComment.type === "replying" && activeComment.id === comment.id
@@ -29,7 +29,7 @@ function Comment({comment, replies, currentUserId, addComment,  postId, activeCo
     const deleteComment = () => {
         deleteSelectedComment(comment.id, postId).then((response) => {
             // alert("Comment Deleted")
-            console.log(response)
+            // console.log(response)
         }) 
     }
 

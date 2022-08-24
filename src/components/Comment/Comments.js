@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react';
 import "./commentstyles.css";
 import Comment from './Comment';
 import CommentForm from './CommentForm';
-import { createNewComment, getComments, updateSelectedComment } from '../../util/util';
+import { commentListner, createNewComment, getComments, updateSelectedComment } from '../../util/util';
 
 
 
@@ -13,13 +13,9 @@ function Comments({postId, currentUserId}) {
 
 
     useEffect(() => {
-        setTimeout(() => {
-            getComments(postId).then((data) => {
-                setComments(data);
-            })
-           
-        },1000);
-
+        getComments(postId).then((data) => {
+            setComments(data);
+        }) 
     },[])
 
 
@@ -54,7 +50,6 @@ function Comments({postId, currentUserId}) {
     
   return (
     <div className='comments'>
-        {/* <h3>Comments</h3> */}
         <div>
             <CommentForm submitLabel="comment" handleSubmit={addComment}  />
         </div>
