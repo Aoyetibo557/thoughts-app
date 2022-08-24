@@ -2,6 +2,10 @@ import React, {useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { signUp } from '../../firebase/auth';
 import "../LoginForm/formstyles.css";
+import SignupLogo from "../../images/signupNoBg.png";
+
+
+
 
 function SignupForm() {
     const [email, setEmail] = useState("")
@@ -9,6 +13,8 @@ function SignupForm() {
     const [lastname, setLastname] = useState("");
     const [username, setUsername] = useState("")
     const [password, setPassword] = useState("");
+    const [loading, setLoading] = useState(false);
+
 
     useEffect(() => {
 
@@ -23,6 +29,7 @@ function SignupForm() {
         ev.preventDefault();
 
         try {
+            setLoading(true);
             var data = new FormData(ev.target);
             const credentials = {
                 email: data.get("email"),
@@ -35,6 +42,7 @@ function SignupForm() {
             // console.log(credentials);
             signUp(credentials).then(() => {
                 navigate("/app/feed")
+                setLoading(false);
             })
             try{
                 resetForm();
@@ -56,35 +64,34 @@ function SignupForm() {
     }
 
   return (
-    <>
+    <div className='loginform'>
         <div className='form__container'>
+            <div>
+                <img style={{height: "70vh"}} src={SignupLogo} alt = " " />
+            </div>
+
             <form method='POST' onSubmit={handleSubmit} className='form'>
                 <div>
                     <h4 className='form__h4'>Create an Account</h4>
                 </div>
 
                 <div>
-                    <label className='form__label' htmlFor='lfirstname'>Firstname</label>
-                    <input className='form__input' type="text" value={firstname} onInput={(e) =>setFirstname(e.target.value) } name="firstname" placeholder="Fistname"  />
+                    <input required className='form__input' type="text" value={firstname} onInput={(e) =>setFirstname(e.target.value) } name="firstname" placeholder="Fistname"  />
                 </div>
 
                 <div>
-                    <label className='form__label' htmlFor='lastname'>Lastname</label>
-                    <input className='form__input' type="text" value={lastname} onInput={(e) =>setLastname(e.target.value) } name="lastname" placeholder="Lastname"  />
+                    <input required className='form__input' type="text" value={lastname} onInput={(e) =>setLastname(e.target.value) } name="lastname" placeholder="Lastname"  />
                 </div>
 
                 <div>
-                    <label className='form__label' htmlFor='email'>Email Address</label>
-                    <input className='form__input' type="text" value={email} onInput={(e) =>setEmail(e.target.value) } name="email" placeholder="youraddress@mail.com"  />
+                    <input required className='form__input' type="text" value={email} onInput={(e) =>setEmail(e.target.value) } name="email" placeholder="youraddress@mail.com"  />
                 </div>
                 <div>
-                    <label className='form__label' htmlFor='username'>Username</label>
-                    <input className='form__input' type="text" value={username} onInput={(e) =>setUsername(e.target.value) } name="username" placeholder="Username"  />
+                    <input required className='form__input' type="text" value={username} onInput={(e) =>setUsername(e.target.value) } name="username" placeholder="Username"  />
                 </div>
 
                 <div>
-                    <label className='form__label' htmlFor='password'>Password</label>
-                    <input className='form__input' type="password" value={password} onInput={(e) => setPassword(e.target.value) } name="password" placeholder="Password"  />
+                    <input required className='form__input' type="password" value={password} onInput={(e) => setPassword(e.target.value) } name="password" placeholder="Password"  />
                 </div>
                 
                 <div>
@@ -100,7 +107,7 @@ function SignupForm() {
                 </div>
             </form>
         </div>
-    </>
+    </div>
   )
 }
 
