@@ -276,6 +276,31 @@ const updateUserProfile =async(newProfileDetail, profileUID)=> {
 
 }
 
+
+const createDraft = async(draftData) => {
+
+    try{
+        const draftRef = doc(collection(db, 'drafts'));
+        const uniqueId = draftRef.id;
+
+        const draftDetails = {
+            author: auth.currentUser?.email,
+            comments: 0,
+            content: draftData.content,
+            date: new Date(),
+            likes:0,
+            location: draftData.location,
+            postId: uniqueId,
+            userId: auth.currentUser.uid,
+        }
+        const newCard =  await setDoc(draftRef, draftDetails);
+        console.log(newCard)
+        return newCard
+    }catch(error) {
+        return error.message
+    }  
+}
+
 export { 
         createPost,
         commentListner, 
@@ -290,5 +315,6 @@ export {
         getAllEvents,
         createNewMessage,
         getGroupMessage,
-        updateUserProfile
+        updateUserProfile,
+        createDraft
     }

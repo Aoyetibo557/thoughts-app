@@ -1,24 +1,16 @@
-.newfeedcomp {
+ .newfeedcomp {
     width: 80%;
     height: 80vh;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-left: 15%;
+    margin-left: 17%;
+    margin-top: 5%;
 }
 
-.newfeedcomp__form {
-    width: 45vw;
-    height: 30vh;
-    border-radius: 7px;
-    display: flex;
-    flex-direction: column;
-    background-color: #fff;
-    padding: 20px;
-    box-shadow: 10px 5px 10px 5px #eee;
-
+.newfeedcomp__form{
+    width: 100%;
 }
+
 
 @media only screen and (max-width: 768px) {
     .newfeedcomp {
@@ -26,9 +18,4 @@
         height: 80vh;
         margin-left: 0%;
     }
-
-    .newfeedcomp__form {
-        width: 80%;
-        height: 55vh;
-    }
-}
+} 

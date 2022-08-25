@@ -25,7 +25,7 @@ function SidebarLinks({authedUsersName}) {
         </Link>
         
         <Link to="/app/feed" className='linkDiv'>
-          <RiDraftLine className='linkIcon' /> <SidebarLink link="/" name="Drafts" />
+          <RiDraftLine className='linkIcon' /> <SidebarLink link="/app/drafts" name="Drafts" />
         </Link>
         
         <Link to="/app/feed" className='linkDiv'>

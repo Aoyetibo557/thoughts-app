@@ -5,6 +5,7 @@ import { getAuth, createUserWithEmailAndPassword, onAuthStateChanged, signInWith
 import { onSnapshot } from "firebase/firestore";
 import { getFirestore, collection, query, orderBy, limit, where, getDocs, updateDoc, deleteField, deleteDoc,increment, addDoc, collectionGroup, doc, setDoc } from "firebase/firestore/lite";
 import {ref, onValue} from "firebase/database";
+import { getStorage } from "firebase/storage";
 
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -27,6 +28,7 @@ const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 const db = getFirestore(app);
 const auth = getAuth(app);
+const storage = getStorage(app);
 
 export {
   analytics, 
@@ -54,4 +56,5 @@ export {
   onSnapshot,
   orderBy, 
   limit,
+  storage
 }

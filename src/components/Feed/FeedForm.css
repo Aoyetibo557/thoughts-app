@@ -1,3 +1,7 @@
+.feedform__container {
+    width: 60%;
+}
+
 .feedform {
     display: flex;
     flex-direction: column;
@@ -7,53 +11,52 @@
     height: 100%;
 }
 
-.feedform__topdiv {
-    width: 220px !important;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-    padding: 5px;
-    border-radius: 999px;
-    border: 1px solid rgba(128, 128, 128, 0.453);
+.feedform__h4{
+    font-size: 2rem;
+    font-weight: 300;
+    color: #000;
 }
 
-.feedform__img {
-    width: 30px;
-    border-radius: 999px;
-    object-fit: contain;
-}
-
-.feedform__topdiv p {
-    margin-left: 10px;
-}
 .feedform div {
     width: 100%;
+    margin-top: 30px;
+    margin-bottom: 10px;
 }
 
 
 .feedform__location {
-    width: 70%;
-    padding: 5px;
+    width: 100%;
+    height: 30px;
+    padding: 10px;
     outline: none;
     border: none;
     font-size: 15px;
+    border: .8px solid purple;
+    background-color: transparent;
+}
 
+.feedform__location:focus {
+    border: 1px solid purple;
 }
 
 .feedform__textarea::placeholder{
-    font-size: 17px;
+    font-size: 15px;
 }
 
 .feedform__textarea {
     width: 100%;
     resize: none;
-    /* height: 200px; */
+    height: 180px;
     font-size: 15px;
     outline: none;
-    padding: 5px;
+    padding: 10px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    border: none;
+    border: .8px solid purple;
+    background-color: transparent;
+}
+
+.feedform__textarea:focus {
+    border: 1px solid purple
 }
 
 .feedform__button {
@@ -61,9 +64,10 @@
     padding: 10px;
     width: 10vw;
     color: #fff;
-    background: #000;
+    background: purple;
     font-size: 14px;
     cursor: pointer;
+    margin-right: 20px;
 
 }
 
@@ -80,13 +84,28 @@
     background: #000;
     font-size: 14px;
     cursor: auto;
+    margin-right: 20px;
 }
 
 @media only screen and (max-width: 768px ) {
+
+    .feedform__container {
+        width: 90%;
+    }
+
     .feedform__button {
         width: 100%;
     }
     .feedform__button-disabled{
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .feedform__location{
+        width: 100%;
+    }
+
+    .feedform__textarea{
         width: 100%;
     }
 }

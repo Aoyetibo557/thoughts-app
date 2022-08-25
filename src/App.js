@@ -13,6 +13,7 @@ import Sidebar from './components/Sidebar/Sidebar';
 import { getCurrentUserData } from "./util/util";
 import { auth } from "./firebase/firebase";
 import ChatRoom from "./pages/ChatRoom";
+import DraftsPage from "./pages/DraftsPage";
 
 
 
@@ -67,6 +68,16 @@ function App() {
               <RequireAuth redirectTo={"/"}>
                 <Sidebar authedUsersName={name} />
                 <EventsPage />
+              </RequireAuth>
+            }
+          />
+
+          <Route 
+            path='/app/drafts'
+            element={
+              <RequireAuth redirectTo={"/"}>
+                <Sidebar authedUsersName={name} />
+                <DraftsPage />
               </RequireAuth>
             }
           />
