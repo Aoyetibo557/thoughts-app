@@ -301,14 +301,15 @@ const createDraft = async(draftData) => {
     }  
 }
 
-const getDrafts = async() => {
+const getDrafts = async(userId) => {
     const draftRef = collection(db, 'drafts');
-    const draftQuery = query(draftRef, orderBy("date", "desc"), limit(10));
+    const draftQuery = query(draftRef, where("userId", "==", auth.currentUser?.uid || userId)); //limit(10)  orderBy("date", "desc")
     const draftSnapshot = await getDocs(draftQuery);
     const draftArr = [];
     draftSnapshot.forEach((doc) => {
         draftArr.push(doc.data())
-    } )
+        console.log(doc.data())
+    })
     return draftArr;
 }
 

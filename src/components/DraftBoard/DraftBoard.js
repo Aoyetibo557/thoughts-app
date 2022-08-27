@@ -1,10 +1,13 @@
 /* eslint-disable array-callback-return */
 import React, {useState, useEffect} from 'react';
+import { auth } from '../../firebase/firebase';
 import { deleteDraft, getDrafts } from '../../util/util';
 import BasicAlert from '../BasicAlert/BasicAlert';
 import SearchBar from '../SearchBar/SearchBar';
 import "./DraftBoard.css";
 import DraftCard from './DraftCard';
+import Loading from '../Loading/Loading';
+
 
 function DraftBoard() {
     const [searchQuery, setSearchQuery] = useState('');
@@ -12,7 +15,7 @@ function DraftBoard() {
     const [filteredDrafts, setFilteredDrafts] = useState([]);
     const [error, setError] = useState('');
     const [isLoading, setIsLoading] = useState(true);
-
+    const [isDeleting, setIsDeleting] = useState(true);
 
     const onSubmit = (e) => {
         e.preventDefault();
@@ -20,16 +23,21 @@ function DraftBoard() {
     }
 
     useEffect(() => {
-        try {
-            getDrafts(searchQuery).then(drafts => {
-                setDrafts(drafts);
-                console.log(drafts);
-            }).catch(error => {
+        setIsLoading(true);
+        const timeout =setTimeout(()=>{
+            try {
+                getDrafts(searchQuery, auth.currentUser?.uid).then(drafts => {
+                    setDrafts(drafts);
+                    console.log(drafts);
+                    setIsLoading(false);
+                }).catch(error => {
+                    console.log(error.message);
+                })
+            }catch(error) {
                 console.log(error.message);
-            })
-        }catch(error) {
-            console.log(error.message);
-        }
+            }    
+        },3000)
+        return () => clearTimeout(timeout);
     }, [])
 
     useEffect(() => {
@@ -39,11 +47,11 @@ function DraftBoard() {
     }, [drafts, searchQuery])
 
     const onDelete = (draftId) => {
-        setIsLoading(true);
+        setIsDeleting(true);
         setDrafts(drafts.filter(draft => draft.postId !== draftId));
         deleteDraft(draftId).then(() => {
             console.log('draft deleted');
-            setIsLoading(false);
+            setIsDeleting(false);
         }).catch(error => {
             console.log(error.message);
             setError(error.message);
@@ -52,7 +60,7 @@ function DraftBoard() {
 
   return (
     <div className='draftboard'>
-        {!isLoading && <BasicAlert type={"success"} message="Draft Deleted!" />}
+        {!isDeleting && <BasicAlert type={"success"} message="Draft Deleted!" />}
         {error.length > 0 && <BasicAlert type={"error"} message={error || "An error occured while deleting!"} />}
         <div className='draftboard__container'>
             <SearchBar searchQuery={searchQuery} setSearchQuery={setSearchQuery} onSubmit={onSubmit} />
@@ -65,7 +73,8 @@ function DraftBoard() {
                 </div>
            ):(
                 <div className='draftboard__empty'>
-                    <p>No drafts found!</p>
+                    
+                    {isLoading ? <Loading /> : <p>No drafts found!</p>}
                 </div>
            )}
         </div>
