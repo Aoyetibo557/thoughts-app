@@ -24,7 +24,7 @@ function App() {
 
   useEffect(() => {
     setTimeout(() => {
-      getCurrentUserData(auth.currentUser?.uid).then((response) => {
+      getCurrentUserData(auth.currentUser.uid).then((response) => {
         setName(response.firstname + " " + response.lastname)
         setUser(response)
       })
@@ -138,6 +138,16 @@ function App() {
               <RequireAuth redirectTo={"/"}>
                 <Sidebar authedUsersName={name} />
                 <ChatRoom author={name} chatGroup={"ideas"} />
+              </RequireAuth>
+            }
+          />
+
+          <Route 
+            path="*"
+            element={
+              <RequireAuth redirectTo={"/"}>
+                <Sidebar authedUsersName={name} />
+                <Dashboard name={name} />
               </RequireAuth>
             }
           />
