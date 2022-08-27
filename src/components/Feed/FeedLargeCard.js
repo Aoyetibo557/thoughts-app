@@ -38,7 +38,7 @@ function FeedLargeCard({id, avatar, author, location,  date, likes, comments, co
 
             <button onClick={() => setShowComments(!showComments)} className='feedlargecard__button' >
                 <FaCommentAlt className='feedlargecard__icon' />
-                <p> {comments} Comments</p>
+                <p>  Comments</p>
             </button>
 
             

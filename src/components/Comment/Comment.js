@@ -7,7 +7,7 @@ import CommentForm from './CommentForm';
 
 // the parentId is the same as the comment id of a diffrent comment that would malke it a sub comment of that comment
 
-function Comment({comment, replies, currentUserId, addComment,  postId, activeComment, setActiveComment, updateComment,  parentId=null}) {
+function Comment({comment, replies, currentUserId, addComment,deleteComment,  postId, activeComment, setActiveComment, updateComment,  parentId=null}) {
     // These are to make sure a user can only edit the comments the logged in user created
     const canReply = Boolean(currentUserId);
     const canEdit = currentUserId === comment.userId;
@@ -26,12 +26,12 @@ function Comment({comment, replies, currentUserId, addComment,  postId, activeCo
      * This uses a function from util to delete a specific comment using both the postId and Comment Id to find it in the 
      * comments collection
      */
-    const deleteComment = () => {
-        deleteSelectedComment(comment.id, postId).then((response) => {
-            // alert("Comment Deleted")
-            // console.log(response)
-        }) 
-    }
+    // const deleteComment = () => {
+    //     deleteSelectedComment(comment.id, postId).then((response) => {
+    //         // alert("Comment Deleted")
+    //         // console.log(response)
+    //     }) 
+    // }
 
   return (
     <div className='comment'>

@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react';
 import "./commentstyles.css";
 import Comment from './Comment';
 import CommentForm from './CommentForm';
-import { commentListner, createNewComment, getComments, updateSelectedComment } from '../../util/util';
+import { commentListner, createNewComment, deleteSelectedComment, getComments, updateSelectedComment } from '../../util/util';
 
 
 
@@ -47,6 +47,24 @@ function Comments({postId, currentUserId}) {
         })
     }
 
+
+    
+    /**
+     * This uses a function from util to delete a specific comment using both the postId and Comment Id to find it in the 
+     * comments collection
+     */
+    const deleteComment = (commentId, postId) => {
+        deleteSelectedComment(commentId, postId).then(() => {
+            const updatedComments = comments.filter(comment => comment.id !== commentId);
+            setComments(updatedComments);
+            setActiveComment(null); //this is to get rid of the form after button click
+        }).catch(err => {
+            setError(err.message);
+        }).finally(() => {
+            setError("");
+        } )
+    }
+
     
   return (
     <div className='comments'>
@@ -65,6 +83,7 @@ function Comments({postId, currentUserId}) {
                     setActiveComment = {setActiveComment}
                     addComment={addComment}
                     updateComment={updateComment}
+                    deleteComment={() => deleteComment(rtComment.id, rtComment.postId)}
                 />
             ))}
 

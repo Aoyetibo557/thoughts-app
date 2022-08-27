@@ -24,20 +24,20 @@ function SidebarLinks({authedUsersName}) {
           <BsCalendarWeek className='linkIcon' /> <SidebarLink link="/app/events" name="Events" />
         </Link>
         
-        <Link to="/app/feed" className='linkDiv'>
+        <Link to="/app/drafts" className='linkDiv'>
           <RiDraftLine className='linkIcon' /> <SidebarLink link="/app/drafts" name="Drafts" />
         </Link>
         
         <Link to="/app/feed" className='linkDiv'>
-          <FaArchive className='linkIcon' /> <SidebarLink link="/" name="Archives" />
+          <FaArchive className='linkIcon' /> <SidebarLink link="/" name="Activity" />
         </Link>
 
         <div className='linkDiv'>
           {
             auth.currentUser ? 
-            <Profile avatar={ProfilePicture} name={authedUsersName.length === 0 ? auth.currentUser?.uid : authedUsersName } />
+            <Profile avatar={ProfilePicture} name={authedUsersName.length === 0 ? <Loading size={"small"} /> : authedUsersName } />
             :
-            <Loading />
+            <Loading size={"small"} />
           }
         </div>
       </div>

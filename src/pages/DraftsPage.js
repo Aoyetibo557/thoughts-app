@@ -1,9 +1,10 @@
 import React from 'react'
+import DraftBoard from '../components/DraftBoard/DraftBoard'
 
 function DraftsPage() {
   return (
     <div>
-        <h4>Drafts</h4>
+      <DraftBoard />
     </div>
   )
 }

@@ -301,6 +301,23 @@ const createDraft = async(draftData) => {
     }  
 }
 
+const getDrafts = async() => {
+    const draftRef = collection(db, 'drafts');
+    const draftQuery = query(draftRef, orderBy("date", "desc"), limit(10));
+    const draftSnapshot = await getDocs(draftQuery);
+    const draftArr = [];
+    draftSnapshot.forEach((doc) => {
+        draftArr.push(doc.data())
+    } )
+    return draftArr;
+}
+
+const deleteDraft = async(draftId) => {
+    const draftRef = doc(collection(db, 'drafts'), draftId);
+    const deleteDraft = await deleteDoc(draftRef);
+    return deleteDraft;
+}
+
 export { 
         createPost,
         commentListner, 
@@ -316,5 +333,7 @@ export {
         createNewMessage,
         getGroupMessage,
         updateUserProfile,
-        createDraft
+        createDraft,
+        getDrafts,
+        deleteDraft 
     }

@@ -48,8 +48,8 @@ function FeedForm({handleSubmit}) {
                     <input required className='feedform__location' type={"text"} value={location} onInput={(e) => setLocation(e.target.value)} name="feed-loction" placeholder='Location: Ex - New York, NY' />
                 </div>
                 <div>
-                    <label htmlFor=''>Content</label>
-                    <textarea required value={input} onChange={(e) => setInput(e.target.value)} rows="4" cols="5" className='feedform__textarea' placeholder= {`What's on your mind?`}></textarea>
+                    <label htmlFor=''>Content (Max. 200 chars limit)</label>
+                    <textarea required maxLength={200} value={input} onChange={(e) => setInput(e.target.value)} rows="4" cols="5" className='feedform__textarea' placeholder= {`What's on your mind?`}></textarea>
                 </div>
 
                 <div>
