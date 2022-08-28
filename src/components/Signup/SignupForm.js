@@ -67,7 +67,7 @@ function SignupForm() {
     <div className='loginform'>
         <div className='form__container'>
             <div>
-                <img style={{height: "70vh"}} src={SignupLogo} alt = " " />
+                <img className='loginform__logo signup__img' src={SignupLogo} alt = " " />
             </div>
 
             <form method='POST' onSubmit={handleSubmit} className='form'>
