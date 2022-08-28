@@ -41,12 +41,12 @@ function LoginForm() {
     <div className='loginform'>
         <div className='form__container'>
             <div className='form__container__left'>
-               <img style={{ width: "15vw", objectFit: "contain"}} src={LogoImage} alt = " " />
+               <img className='loginform__logo' src={LogoImage} alt = " " />
                 <img className='form__img' src={LoginImage} alt='login' />
 
                 <div>
                     <h3 className='form__container__left__h3'>Hello again!</h3>
-                    <Link to='/signup'>Create an account</Link>
+                    <Link className='form__container__left__link' to='/signup'>Create an account</Link>
                 </div>
             </div>
             <form method='POST' onSubmit={login} className='form'>

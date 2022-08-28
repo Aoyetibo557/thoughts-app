@@ -17,6 +17,11 @@
    
 }
 
+.loginform__logo {
+    width: 15vw;
+    object-fit: contain;
+}
+
 .form__container__left {
     height: 100%;
     display: flex;
@@ -91,6 +96,21 @@
         align-items: center;
     }
 
+    .form__container__left h2 {
+        font-size: 2rem;
+        font-weight: bold;
+        color: rgb(0, 0, 0);
+    }
+
+    .form__container__left__h3 {
+        font-size: 2.2rem;
+        font-weight: 300;
+        color: rgb(0, 0, 0);
+        position: absolute;
+        top: 10%;
+        left: 45%;
+    } 
+
     .form {
         width: 100%;
         padding: 5px;
@@ -104,14 +124,46 @@
         width: 80vw;
         padding: 15px;
         border: 1px solid rgba(0, 0, 0, 0.254);
+    }
+
+    .loginform__logo {
+        width: 55vw;
+        height: 55px;
+        display: flex;
+        justify-content: center;
+        object-fit: contain;
     }
 }
 
 @media only screen and (max-width: 992px) {
     .form__container {
         width: 100%;
+        height: 100%;
+        flex-direction: column;
         align-items: center;
     }
+
+    .form__container__left h2 {
+        font-size: 2rem;
+        font-weight: bold;
+        color: rgb(0, 0, 0);
+    }
+
+    .form__container__left__h3 {
+        font-size: 2rem;
+        font-weight: 300;
+        color: rgb(0, 0, 0);
+        position: absolute;
+        top: 45%;
+        left: 30%;
+    } 
+
+    .form__img{
+        width: 90%;
+        height: 350px;
+        object-fit: contain;
+    }
+
     .form {
         width: 100%;
         padding: 5px;
@@ -124,5 +176,15 @@
         width: 80vw;
         padding: 15px;
         border: 1px solid rgba(0, 0, 0, 0.254);
+    }
+
+    .loginform__logo {
+        width: 55vw;
+        height: 55px;
+        object-fit: cover;
+    }
+
+    .form__container__left__link {
+        display: none;
     }
 }
