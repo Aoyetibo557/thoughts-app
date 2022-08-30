@@ -17,12 +17,12 @@ You may also see any lint errors in the console.
 ### `To Check out the current app progress`
 
 Use this link [https://thoughts-app-phi.vercel.app/](https://thoughts-app-phi.vercel.app/)
-Also keep in mind that the current version is not responsive yet. I hope to implement the responsive designs for mobile and other in the near future.
+Keep in mind that the current version is not fully responsive yet. I hope to implement the responsive designs for mobile and other in the near future.
 Your feedback is welcome. Thank you.
 
 ### `App Screenshots`
 
-![loginPage](https://user-images.githubusercontent.com/54692909/160218698-c3f1de77-c403-4f1b-bcdb-b150a50bd0de.JPG)
+![altLogin](https://user-images.githubusercontent.com/54692909/187343599-3e49fc8c-b0fc-4596-bcd6-30c039fccd98.JPG)
 ![signupPage](https://user-images.githubusercontent.com/54692909/160218703-9aeb646a-4805-4b5f-9f13-7acb6e53fd3f.JPG)
 ![feedPage](https://user-images.githubusercontent.com/54692909/160218531-50f11e40-c335-4cea-9d26-d5ed2c609afd.JPG)
 ![eventsPage](https://user-images.githubusercontent.com/54692909/160218555-66f7ab61-1f85-4b1a-8c7d-662aefefd2ad.JPG)
