@@ -69,7 +69,7 @@ function DraftBoard() {
                 <div className='draftboard__list'>
                     {filteredDrafts.map(draft => (
                         <DraftCard key={draft.postId} draft={draft} onDelete={() => onDelete(draft.postId)} />
-                    ))}
+                    )).reverse()}
                 </div>
            ):(
                 <div className='draftboard__empty'>

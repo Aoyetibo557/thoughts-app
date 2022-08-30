@@ -1,9 +1,10 @@
 import React from 'react';
 import "./SidebarLinks.css";
 import SidebarLink from '../Sidebarlink/SidebarLink'
-import { FaArchive, FaLightbulb } from "react-icons/fa";
+import { FaLightbulb } from "react-icons/fa";
 import { GrHomeRounded} from "react-icons/gr";
 import { RiDraftLine } from "react-icons/ri";
+import { VscInbox } from "react-icons/vsc";
 import Profile from '../Profile/Profile';
 import { IoGameController } from "react-icons/io5";
 import {BsLaptopFill, BsCalendarWeek} from "react-icons/bs";
@@ -28,9 +29,9 @@ function SidebarLinks({authedUsersName}) {
           <RiDraftLine className='linkIcon' /> <SidebarLink link="/app/drafts" name="Drafts" />
         </Link>
         
-        <Link to="/app/feed" className='linkDiv'>
-          <FaArchive className='linkIcon' /> <SidebarLink link="/" name="Activity" />
-        </Link>
+        {/* <Link to="/app/inbox" className='linkDiv'>
+          <VscInbox className='linkIcon' /> <SidebarLink link="/app/inbox" name="Inbox" />
+        </Link> */}
 
         <div className='linkDiv'>
           {

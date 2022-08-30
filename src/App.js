@@ -14,6 +14,7 @@ import { getCurrentUserData } from "./util/util";
 import { auth } from "./firebase/firebase";
 import ChatRoom from "./pages/ChatRoom";
 import DraftsPage from "./pages/DraftsPage";
+import InboxPage from "./pages/InboxPage";
 
 
 
@@ -28,7 +29,7 @@ function App() {
         setName(response.firstname + " " + response.lastname)
         setUser(response)
       })
-    },2000)
+    },3000)
     return () => {
       setName("")
       setUser({})
@@ -81,6 +82,17 @@ function App() {
               </RequireAuth>
             }
           />
+
+          {/* <Route 
+            path='/app/inbox'
+            element={
+              <RequireAuth redirectTo={"/"}>
+                <Sidebar authedUsersName={name} />
+                <InboxPage />
+              </RequireAuth>
+            }
+          /> */}
+
 
           <Route 
             path='/app/settings'
