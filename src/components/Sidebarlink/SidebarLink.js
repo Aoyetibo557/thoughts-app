@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 
 const styles = {
-   
+    fontFamily:"'Quicksand', sans-serif",
     fontSize: "15px",
     textDecoration:"none", 
     color: "#000", 
@@ -15,6 +15,7 @@ const styles = {
 }
 
 function SidebarLink({link, name}) {
+  
   return (
     <>
       <Link style={styles} to={link}> {name}</Link>

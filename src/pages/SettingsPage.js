@@ -5,7 +5,8 @@ function SettingsPage({userdata}) {
  
   return (
     <div>
-        <SettingComp userData={userdata} />
+      <h4>Setting</h4>
+      <SettingComp userData={userdata} />
     </div>
   )
 }

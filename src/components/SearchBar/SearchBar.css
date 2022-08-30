@@ -29,7 +29,8 @@
     border-radius: 5px;
     padding: 0px 20px;
     font-size: 0.9rem;
-    font-weight: 300;
+    font-weight: 500;
+    font-family: 'Quicksand', sans-serif;
     color: #000;
     outline: none;
 }
@@ -40,6 +41,7 @@
     background-color: purple;
     color: #fff;
     font-size: 1rem;
-    font-weight: 300;
+    font-weight: 500;
     outline: none;
+    font-family: "Quicksand", sans-serif;
 }

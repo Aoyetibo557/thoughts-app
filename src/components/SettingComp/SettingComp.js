@@ -2,9 +2,11 @@ import React, {useState, useEffect} from 'react';
 import { updateUserProfile } from '../../util/util';
 import "./SettingComp.css";
 import { IoMdClose } from "react-icons/io";
+import { BiArrowBack } from "react-icons/bi";
 import AOS from "aos"
 import "aos/dist/aos.css";
 import Loading from '../Loading/Loading';
+import { Link } from '@mui/material';
 
 
 
@@ -69,7 +71,11 @@ function SettingComp({userData}) {
 
   return newUsername?.length > 0 || newBio?.length > 0 ? (
     <div className='settingcomp'>
-
+        <div className='settingcomp__topdiv'>
+            <Link className='settingcomp__topdiv__back' to="/app/feed"><BiArrowBack /> Back to feed</Link>
+            <h4 className='settingcomp__topdiv__title'>Settings</h4>
+        </div>
+       
        {msg && (
             <div data-aos="fade-left" className={!succState ? 'settingcomp__error': 'settingcomp__success'}>
                 <p>

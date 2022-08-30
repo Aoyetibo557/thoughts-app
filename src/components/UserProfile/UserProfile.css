@@ -24,6 +24,8 @@
 .userprofile__name {
     font-size: 2.9rem;
     font-weight: 600;
+    font-family: 'Quicksand', sans-serif;
+
 }
 .userprofile__div {
     width: 55vw;
@@ -36,10 +38,14 @@
 .userprofile__p{
     font-size: 16px;
     opacity: 0.6;
+    font-weight: 400;
+    font-family: 'Quicksand', sans-serif;
 }
 
 .userprofile__div h4 {
     font-size: 1.2rem;
+    font-size: 600;
+    font-family: 'Quicksand', sans-serif;
 }
 
 .userprofile__info__div {
@@ -51,6 +57,7 @@
     padding: 20px;
     margin-bottom: 10px;
     background-color: rgba(223, 215, 215, 0.707);
+    font-family: 'Quicksand', sans-serif;
 }
 
 .userprofile__icon {
@@ -63,6 +70,7 @@
     flex-direction: row;
     justify-content: space-between;
     margin-top: 20px;
+    font-family: 'Quicksand', sans-serif;
 }
 
 @media only screen and (max-width: 768px ) {

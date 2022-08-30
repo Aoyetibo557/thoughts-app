@@ -17,12 +17,15 @@
 
 .feedlargecard__author {
     font-size: 15px;
-    font-weight: 400;
+    font-weight: 500;
+    font-family: 'Quicksand', sans-serif;
+    
 }
 
 .feedlargecard__location {
     font-size: 13px;
     opacity: 0.5;
+    font-family: 'Quicksand', sans-serif;
 }
 
 
@@ -42,6 +45,7 @@
 .feedlargecard__content {
     margin-left: 50px;
     margin-top: 10px;
+    font-family: 'Quicksand', sans-serif;
 }
 
 .feedlargecard__button {
@@ -59,6 +63,8 @@
 .feedlargecard__button p {
     font-size: 13px;
     opacity: 0.6;
+    font-weight: 500;
+    font-family: 'Quicksand', sans-serif;
 }
 
 .feedlargecard__icon {

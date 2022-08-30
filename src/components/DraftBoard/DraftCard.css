@@ -40,13 +40,15 @@
 
 .draftcard__location {
     font-size: 0.90rem;
-    font-weight: 350;
+    font-weight: 500;
+    font-family: 'Quicksand', sans-serif;
 }
 
 
 .draftcard__author {
     font-size: 0.9rem;
     font-weight: 400;
+    font-family: 'Quicksand', sans-serif;
     color: #000;
     border: 0.4px solid rgba(128, 0, 128, 0.286);
     border-radius: 999px;
@@ -56,6 +58,7 @@
 .draftcard__date {
     font-size: 0.79rem;
     font-weight: 300;
+    font-family: 'Quicksand', sans-serif;
     color: #000;
 }
 
@@ -67,15 +70,17 @@
 }
 .draftcard__content {
     font-weight: 400;
+    font-family: 'Quicksand', sans-serif;
     font-size: 1.1rem;
 }
 
 .draftcard__btn {
     font-size: 1rem;
-    font-weight: 400;
     color: #000;
     border: 0.4px solid rgba(128, 0, 128, 0.286);
     padding: 5px;
     margin-top: 10px;
+    font-weight: 400;
+    font-family: 'Quicksand', sans-serif;
 }
    

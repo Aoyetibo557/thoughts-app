@@ -14,9 +14,6 @@ import { getCurrentUserData } from "./util/util";
 import { auth } from "./firebase/firebase";
 import ChatRoom from "./pages/ChatRoom";
 import DraftsPage from "./pages/DraftsPage";
-import InboxPage from "./pages/InboxPage";
-
-
 
 
 function App() {
