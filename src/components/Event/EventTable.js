@@ -8,8 +8,8 @@ function EventTable({events}) {
     <div className='eventTable'>
       
       {events.length===0 &&(
-        Array.from({length: 3}, (n) => (
-          <EventSkeleton theme="dark" />
+        Array.from({length: 4}, (n) => (
+          <EventSkeleton key={n} theme="dark" />
         ))
       )}
 
@@ -24,18 +24,6 @@ function EventTable({events}) {
           url={event.url}
         />
       ))}
-
-      {/* 
-        {Array.from({length: 9}, () => (
-            <EventCard 
-                company="Qualcomm"
-                title="Qualcomm at NSBE48"
-                url={"https://www.untapped.io/app/discover/events/qualcomm/qualcomm-at-nsbe-48/95c4bc16-cf4e-49c8-b42f-f378623c864e"}
-                type="Career Fair"
-                thumbnail={"https://placehold.jp/30/dd6699/ffffff/300x150.png?text=placeholder+image"}
-                date="March 23, 2022 at 12:00 AM - March 26, 2022 at 12:00 AM PDT"
-            />  
-        ))} */}
 
     </div>
   )

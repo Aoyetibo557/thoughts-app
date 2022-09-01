@@ -15,22 +15,22 @@ import Loading from '../Loading/Loading';
 
 function SidebarLinks({authedUsersName}) {
   return (
-    <div div className='sidebar__container'>
+    <div className='sidebar__container'>
       <div className="styles">
         <Link to="/app/feed" className='linkDiv'>
-          <GrHomeRounded className='linkIcon' /> <SidebarLink link="/app/feed" name="Feed" />
+          <GrHomeRounded className='linkIcon' /> <SidebarLink  name="Feed" />
         </Link>
 
         <Link to="/app/events" className='linkDiv'>
-          <BsCalendarWeek className='linkIcon' /> <SidebarLink link="/app/events" name="Events" />
+          <BsCalendarWeek className='linkIcon' /> <SidebarLink  name="Events" />
         </Link>
         
         <Link to="/app/drafts" className='linkDiv'>
-          <RiDraftLine className='linkIcon' /> <SidebarLink link="/app/drafts" name="Drafts" />
+          <RiDraftLine className='linkIcon' /> <SidebarLink  name="Drafts" />
         </Link>
         
         {/* <Link to="/app/inbox" className='linkDiv'>
-          <VscInbox className='linkIcon' /> <SidebarLink link="/app/inbox" name="Inbox" />
+          <VscInbox className='linkIcon' /> <SidebarLink  name="Inbox" />
         </Link> */}
 
         <div className='linkDiv'>
@@ -44,23 +44,23 @@ function SidebarLinks({authedUsersName}) {
       </div>
 
       <div className="styles">
-          <h4 className='styles__h4'>COMMUNITIES</h4>
+        <h4 className='styles__h4'>COMMUNITIES</h4>
         
         <div >
           <Link to="/app/community/ga" className='linkDiv'>
-            <BsLaptopFill className='linkIcon' /> <SidebarLink link="/app/community/ga" name="General Advice" />
+            <BsLaptopFill className='linkIcon' /> <SidebarLink name="General Advice" />
           </Link>
 
           <Link to="/app/community/gz" className='linkDiv'>
-            <IoGameController className='linkIcon' /> <SidebarLink link="/app/community/gz" name="Game Zone" />
+            <IoGameController className='linkIcon' /> <SidebarLink name="Game Zone" />
           </Link>
           
           <Link to="/app/community/ls" className='linkDiv'>
-            <RiDraftLine className='linkIcon' /> <SidebarLink link="/app/community/ls" name="Lifestyle" />
+            <RiDraftLine className='linkIcon' /> <SidebarLink name="Lifestyle" />
           </Link>
 
           <Link to="/app/community/ideas" className='linkDiv'>
-            <FaLightbulb className='linkIcon' /> <SidebarLink link="/app/community/ideas" name="Ideas" />
+            <FaLightbulb className='linkIcon' /> <SidebarLink name="Ideas" />
           </Link>
         </div>
       </div>

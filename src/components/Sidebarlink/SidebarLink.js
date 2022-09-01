@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
 
 const styles = {
     fontFamily:"'Quicksand', sans-serif",
@@ -14,11 +13,11 @@ const styles = {
     }
 }
 
-function SidebarLink({link, name}) {
+function SidebarLink({name}) {
   
   return (
     <>
-      <Link style={styles} to={link}> {name}</Link>
+      <p style={styles} > {name}</p>
     </>
   ) 
 }

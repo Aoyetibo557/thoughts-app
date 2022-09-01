@@ -9,7 +9,8 @@ import SkeletonFeedCard from '../Skeleton/SkeletonFeedCard';
 import TrendingTable from '../Trending/TrendingTable';
 import EventsImage from "../../images/eventsImage.svg";
 import CommunityImage from "../../images/communityImage.svg";
-import ResponsiveSidebar from '../Sidebar/ResponsiveSidebar';
+
+
 
 function UserFeed({userFirstname}) {
     const [feed, setFeed] = useState([]);
@@ -29,10 +30,6 @@ function UserFeed({userFirstname}) {
     <>
         <div className='userfeed__container'>
             <div className='userfeed__top'>
-
-                <div className='userfeed__top__avatar-div'>
-                    <ResponsiveSidebar authUserName={userFirstname} />                    
-                </div>
                 <div>
                     <h4>Welcome {userFirstname}</h4>
                     <p> 0 members | 0 online</p>

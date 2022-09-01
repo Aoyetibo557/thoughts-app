@@ -11,9 +11,10 @@ function TrendingNews() {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        setTimeout(() => {
+        const timeout = setTimeout(() => {
             getTrendingNews(searchFilter);
         }, 2000)
+        return () => clearTimeout(timeout)
 
     },[searchFilter])
 

@@ -24,5 +24,5 @@ function RequireAuth({ children, redirectTo}) {
 export default RequireAuth
 
 RequireAuth.propTypes = {
-  children: PropTypes.object.isRequired,
+  children: PropTypes.array.isRequired,
 };

@@ -14,6 +14,7 @@ import { getCurrentUserData } from "./util/util";
 import { auth } from "./firebase/firebase";
 import ChatRoom from "./pages/ChatRoom";
 import DraftsPage from "./pages/DraftsPage";
+import Header from "./components/Header/Header";
 
 
 function App() {
@@ -44,6 +45,7 @@ function App() {
             path='/app/createfeed' 
             element={
               <RequireAuth redirectTo={"/"}>
+                <Header name={name} />
                 <Sidebar authedUsersName={name} />
                 <NewFeed />
               </RequireAuth>
@@ -64,6 +66,7 @@ function App() {
             path='/app/events'
             element={
               <RequireAuth redirectTo={"/"}>
+                <Header name={name} />
                 <Sidebar authedUsersName={name} />
                 <EventsPage />
               </RequireAuth>
@@ -74,6 +77,7 @@ function App() {
             path='/app/drafts'
             element={
               <RequireAuth redirectTo={"/"}>
+                <Header name={name} />
                 <Sidebar authedUsersName={name} />
                 <DraftsPage />
               </RequireAuth>
@@ -95,6 +99,7 @@ function App() {
             path='/app/settings'
             element={
               <RequireAuth redirectTo={"/"}>
+                <Header name={name} />
                 <Sidebar authedUsersName={name} />
                 <SettingsPage userdata={user} />
               </RequireAuth>
@@ -105,6 +110,7 @@ function App() {
             path='/app/profile'
             element={
               <RequireAuth redirectTo={"/"}>
+                <Header name={name} />
                 <Sidebar authedUsersName={name} />
                 <ProfilePage />
               </RequireAuth>
@@ -115,6 +121,7 @@ function App() {
             path='/app/community/ga'
             element={
               <RequireAuth redirectTo={"/"}>
+                <Header name={name} />
                 <Sidebar authedUsersName={name} />
                 <ChatRoom author={name} chatGroup={"general-advice"} />
               </RequireAuth>
@@ -125,6 +132,7 @@ function App() {
             path='/app/community/gz'
             element={
               <RequireAuth redirectTo={"/"}>
+                <Header name={name} />
                 <Sidebar authedUsersName={name} />
                 <ChatRoom author={name} chatGroup={"gamezone"} />
               </RequireAuth>
@@ -135,6 +143,7 @@ function App() {
             path='/app/community/ls'
             element={
               <RequireAuth redirectTo={"/"}>
+                <Header name={name} />
                 <Sidebar authedUsersName={name} />
                 <ChatRoom author={name} chatGroup={"lifestyle"} />
               </RequireAuth>
@@ -145,6 +154,7 @@ function App() {
             path='/app/community/ideas'
             element={
               <RequireAuth redirectTo={"/"}>
+                <Header name={name} />
                 <Sidebar authedUsersName={name} />
                 <ChatRoom author={name} chatGroup={"ideas"} />
               </RequireAuth>

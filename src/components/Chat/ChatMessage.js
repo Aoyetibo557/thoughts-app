@@ -10,10 +10,10 @@ function ChatMessage({text, author, createdAt}) {
         <img className='chatmessage__img' src={`https://ui-avatars.com/api/?background=0D8ABC&color=fff&name=${author}`} alt={author} />
         <div className='message__userdata'>
            <div>
-                <p className='message__author'>{author}</p>
-                <p className='message__date'>{createdAt?.toDate().toDateString()}</p>
+              <p className='message__author'>{author}</p>
+              <p className='message__date'>{createdAt?.toDate().toDateString()}</p>
            </div>
-            <p className='message__text'>{text}</p>
+            <h5 className='message__text'>{text}</h5>
         </div>
        
     </div>
