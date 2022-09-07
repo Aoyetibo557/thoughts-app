@@ -84,3 +84,14 @@
     font-family: 'Quicksand', sans-serif;
 }
    
+@media only screen and (max-width: 768px) {
+    .draftcard {
+        height: 300px;
+        width: 300px;
+        overflow-x: scroll;
+    }
+
+    .draftcard__content{
+        overflow-x: scroll;
+    }
+}

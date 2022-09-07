@@ -101,16 +101,38 @@
 }
 
 @media only screen and (max-width: 768px ) {
+    .feedform {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 80%;
+    }
 
     .feedform__container {
-        width: 90%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feedform div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+   .feedform__location{
+        width: 80%;
     }
 
     .feedform__button {
-        width: 100%;
+        width: 80%;
+        margin-top: 10px;
     }
     .feedform__button-disabled{
-        width: 100%;
+        width: 80%;
         margin-bottom: 10px;
     }
 

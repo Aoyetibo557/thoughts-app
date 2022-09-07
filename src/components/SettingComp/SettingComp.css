@@ -31,6 +31,7 @@
     color: purple !important;
     text-decoration: underline !important;
 }
+
 .settingcomp__top {
     display: flex;
     flex-direction: row;
@@ -186,4 +187,72 @@
         margin-left: 0%;
         height: 90vh;
     }
+
+    .settingcomp__topdiv {
+       
+        flex-direction: row;
+        align-items: center;
+        height: 10%;
+        padding: 0 10px;
+    }
+
+    .settingcomp__topdiv__title {
+        font-size: 1.6rem;
+    }
+
+    .settingcomp__form {
+        height: 100%;
+        width: 95%;
+    }
+
+    .settingcomp__top {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .settingcomp__top div h4 {
+        display: none;
+    }
+
+    .settingcomp__top div h5 {
+        font-size: 1.5rem;
+    }
+
+    .settingcomp__img {
+        width: 90px;
+        border-radius: 999px;
+    }
+
+
+    .settingcomp__form__div {
+        display: flex;
+        flex-direction: column;
+        /* background-color: red; */
+    }
+
+    .settingcomp__form__div p {
+        font-weight: 500;
+    }
+
+    .settingcomp__form__div h4 {
+        font-weight: 600;
+        font-family: 'Quicksand', sans-serif;
+        font-size: 16px;
+    }
+
+    .settingcomp__input {
+        width: 95%;
+        font-size: 16px;
+    }
+
+    .settingcomp__textarea {
+        width: 95%;
+        font-size: 16px;
+        
+    }
+
+
+
+    
 }

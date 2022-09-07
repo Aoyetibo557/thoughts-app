@@ -25,3 +25,12 @@
     height: 100%;
     margin-top: 30px;
 }
+
+@media only screen and (max-width: 768px) {
+    .draftboard__container {
+        width: 95%;
+    }
+    .draftboard__list{
+        flex-direction: column;
+    }
+}
